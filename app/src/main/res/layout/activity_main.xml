@@ -4,15 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bantulogic.learn.materialdesign_surfacesdemo.MainActivity">
+    tools:context="com.bantulogic.learn.materialdesign_surfacesdemo.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:id="@+id/frameLayout1"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
         android:layout_margin="16dp"
+        android:layout_marginEnd="6dp"
         android:background="#ffff"
-        android:elevation="4dp">
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
 
     </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="6dp"
+        android:background="#ffff"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout1">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="6dp"
+        android:background="#ffff"
+        android:elevation="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+    </FrameLayout>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="6dp" />
 
 </android.support.constraint.ConstraintLayout>
